@@ -21,5 +21,10 @@
     "mocha": "^2.1.0",
     "mocha-casperjs": "^0.5.3",
     "phantomjs": "^1.9.15"
+  },
+  "dependencies": {
+    "ejs": "^2.2.4",
+    "express": "^4.11.2",
+    "grunt-express": "^1.4.1"
   }
 }

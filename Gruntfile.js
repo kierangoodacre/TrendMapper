@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      all: ['Gruntfile.js', 'spec/*/**.js', 'src/*/**.js']
+      all: ['Gruntfile.js', 'spec/*/**.js', 'src/*/**.js', 'tests/*/**.js']
     },
 
     mocha_casperjs: {
