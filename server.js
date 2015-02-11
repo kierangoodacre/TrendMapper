@@ -14,4 +14,9 @@ server.listen(3000, function() {
 	console.log('Server listening on port 3000')
 });
 
+app.get('/data', function(request, response) {
+	response.send({'Hackney':20,'Islington':1})
+})
+
 module.exports = server;
+

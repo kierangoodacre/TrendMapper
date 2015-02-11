@@ -1,5 +1,6 @@
 var map;
 var boroughsJson;
+var colours = ["#74FF70", "#7DFF6E", "#87FF6D", "#90FF6C", "#99FF6B", "#A3FF69", "#ADFF68", "#B7FF67", "#C1FF66", "#CBFF65", "#D6FF63", "#E0FF62", "#EBFF61", "#F6FF60", "#FFFC5F", "#FFF15D", "#FFE55C", "#FFD95B", "#FFCE5A", "#FFC259", "#FFB657", "#FFA956", "#FF9D55", "#FF9054", "#FF8353", "#FF7651", "#FF6950", "#FF5C4F", "#FF4E4E", "#FF4D59"];
 
 function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -7,29 +8,30 @@ function initialize() {
   center: {lat: 51.51, lng: - 0.10}
 	})
 
-  $.getJSON("https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json", function(data) {
-		console.log(data);
-    boroughsJson = data.features
+  $.getJSON("/data", function(data) {
+		console.log(data.Hackney);
+		boroughsJson = data;
+		
+		map.data.setStyle(function(feature){		  	
+			return {fillColor: intensity(boroughsJson[feature.k.name])};
+		});
+		
 	});
 
-var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
 // Load GeoJSON.
+var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
 map.data.loadGeoJson(json);
 
+};
 
+
+
+var intensity = function(data) {
+	return colours[data];
 
 // [START snippet]
 // Color each letter gray. Change the color when the isColorful property
 // is set to true.
-map.data.setStyle(function(feature){
-	// console.log(feature.k.color);
-	// console.log(feature.k.name);
-	if(feature.k.name === 'Hackney'){
-		return {fillColor:'blue'};
-	}else{
-		return {fillColor:'red'};
-	}
-});
 
 
 // map.data.setStyle(function(feature) {
