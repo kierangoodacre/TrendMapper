@@ -12,4 +12,8 @@ describe 'Data pulling' do
   	expect(data.hipster_keyword_array.length).to eq 47
 	end
 
+  it 'Will return a JSON object' do
+    expect(data.response).to include('"location":"Hackney"')
+  end
+
 end
