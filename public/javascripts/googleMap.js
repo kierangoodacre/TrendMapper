@@ -3,17 +3,51 @@ var boroughsJson;
 var colours = ["#74FF70", "#7DFF6E", "#87FF6D", "#90FF6C", "#99FF6B", "#A3FF69", "#ADFF68", "#B7FF67", "#C1FF66", "#CBFF65", "#D6FF63", "#E0FF62", "#EBFF61", "#F6FF60", "#FFFC5F", "#FFF15D", "#FFE55C", "#FFD95B", "#FFCE5A", "#FFC259", "#FFB657", "#FFA956", "#FF9D55", "#FF9054", "#FF8353", "#FF7651", "#FF6950", "#FF5C4F", "#FF4E4E", "#FF4D59"];
 
 function initialize() {
+
+	var styles = [
+	  {
+	    "elementType": "labels",
+	    "stylers": [
+	      { "visibility": "off" }
+	    ]
+	  },{
+	    "elementType": "geometry",
+	    "stylers": [
+	      { "color": "#ffffff" }
+	    ]
+	  },{
+	    "featureType": "road.highway",
+	    "stylers": [
+	      { "color": "#dcedf1" },
+	      { "weight": 0.6 }
+	    ]
+	  },{
+	    "featureType": "road.arterial",
+	    "stylers": [
+	      { "weight": 0.2 },
+	      { "color": "#e6e6e7" }
+	    ]
+	  },{
+	    "featureType": "water",
+	    "stylers": [
+	      { "color": "#2f1380" }
+	    ]
+	  },
+	];
+
   map = new google.maps.Map(document.getElementById('map-canvas'), {
   zoom: 11,
   center: {lat: 51.51, lng: - 0.10}
 	})
+	
+	map.setOptions({styles: styles});
 
   $.getJSON("/data", function(data) {
 		console.log(data.Hackney);
 		boroughsJson = data;
 		
 		map.data.setStyle(function(feature){		  	
-			return {fillColor: intensity(boroughsJson[feature.k.name])};
+			return {fillColor: intensity(boroughsJson[feature.k.name]),strokeColor: 'white',strokeWeight: 0.5};
 		});
 
 	});
@@ -23,6 +57,7 @@ var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-
 map.data.loadGeoJson(json);
 
 };
+
 
 
 
