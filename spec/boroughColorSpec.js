@@ -15,9 +15,13 @@ describe("Borough Color", function(){
 		});
 
 		it("Will become more red", function(){
-			boroughColor.increaseHeatColor(1)
+			boroughColor.increaseHeatColor(2)
 			expect(BoroughColor.heatColor).toEqual(2);
 		});
+
+		it("will expect an array of colours", function(){
+			expect(boroughColor.colours).toEqual(colours)
+		})
 
 	});
 
