@@ -1,0 +1,12 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+}
+
+#map-canvas {
+  height: 100%;
+  width: 75%;
+  margin: 0px;
+  padding: 0px
+}
