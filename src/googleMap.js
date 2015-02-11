@@ -22,8 +22,8 @@ map.data.loadGeoJson(json);
 // Color each letter gray. Change the color when the isColorful property
 // is set to true.
 map.data.setStyle(function(feature){
-	// console.log(feature.k.color);
-	// console.log(feature.k.name);
+	console.log(feature.k.color);
+	console.log(feature.k.name);
 	if(feature.k.name === 'Hackney'){
 		return {fillColor:'blue'};
 	}else{

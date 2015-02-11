@@ -123,7 +123,7 @@ def fetch_data
     end
     write_data_to_file(borough_hash.to_json)
   end
-  puts hash
+
 end
 
 def write_data_to_file(data)
