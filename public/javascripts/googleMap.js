@@ -21,14 +21,37 @@ map.data.loadGeoJson(json);
 // [START snippet]
 // Color each letter gray. Change the color when the isColorful property
 // is set to true.
-map.data.setStyle(function(feature) {
-  var color = 'red';
-  return /** @type {google.maps.Data.StyleOptions} */({
-    fillColor: color,
-    strokeColor: color,
-    strokeWeight: 2
-  });
+map.data.setStyle(function(feature){
+	console.log(feature.k.color);
+	console.log(feature.k.name);
+	if(feature.k.name === 'Hackney'){
+		return {fillColor:'blue'};
+	}else{
+		return {fillColor:'red'};
+	}
 });
+
+
+// map.data.setStyle(function(feature) {
+//   console.log(feature);
+//   console.log(feature.k.name)
+//   if(feature.k.name === 'hackney'){
+//   	var color = 'red';
+//   	return /** @type {google.maps.Data.StyleOptions} */({
+// 	    fillColor: color,
+// 	    strokeColor: color,
+// 	    strokeWeight: 2
+//   });
+// 	} else {
+// 		var color = 'blue';
+// 		return /** @type {google.maps.Data.StyleOptions} */({
+// 	    fillColor: color,
+// 	    strokeColor: color,
+// 	    strokeWeight: 2
+//     });
+// 	};	
+  
+// });
 
 
 // When the user clicks, set 'isColorful', changing the color of the letters.
