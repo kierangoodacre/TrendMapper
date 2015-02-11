@@ -1,7 +1,16 @@
 class Directory
 
-def borough_array
+require 'yelp'
 
+client = Yelp::Client.new({ consumer_key: "e14LehsvaTugymGPlVfdBw",
+                            consumer_secret: "2sRB0QsyE6L3Ms910PQFH72azkw",
+                            token: "ArB_SDJYEA2WBWxJbWODKfS0p9rsI4-c",
+                            token_secret: "L_FKZMAittRmVZ_Rpbg3BaNwEgQ",
+                          })
+
+p client.search('Chelsea', {term: 'fixie'})
+
+def borough_array
 [ "City of London",
 "Barking and Dagenham",
 "Barnet",
