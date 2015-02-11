@@ -4,11 +4,16 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'), {
   zoom: 11,
   center: {lat: 51.51, lng: - 0.10}
-});
+	})
+
+  $.getJSON("https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json", function(data) {
+		console.log(data);
+	});
 
 var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
 // Load GeoJSON.
 map.data.loadGeoJson(json);
+
 
 // [START snippet]
 // Color each letter gray. Change the color when the isColorful property
