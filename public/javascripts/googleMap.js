@@ -15,7 +15,7 @@ function initialize() {
 		map.data.setStyle(function(feature){		  	
 			return {fillColor: intensity(boroughsJson[feature.k.name])};
 		});
-		
+
 	});
 
 // Load GeoJSON.
