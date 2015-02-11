@@ -1,4 +1,5 @@
 var map;
+var boroughsJson;
 
 function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -8,11 +9,13 @@ function initialize() {
 
   $.getJSON("https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json", function(data) {
 		console.log(data);
+    boroughsJson = data.features
 	});
 
 var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
 // Load GeoJSON.
 map.data.loadGeoJson(json);
+
 
 
 // [START snippet]
