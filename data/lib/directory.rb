@@ -104,26 +104,17 @@ def hipster_keyword_array
 "bikram yoga"]
 end
 
-def sml_boroughs
-  ['Hackney', 'Tower Hamlets', 'Camden']
-end
-
-def sml_keywords
-  ['fixie', 'sourdough', 'market']
-end
-
 def fetch_data
-  response = sml_boroughs.each do |borough|
+  borough_array.each do |borough|
     borough_hash = Hash.new
-    sml_keywords.each do |keyword|
-      new_search = @client.search(borough, {term: keyword, radius_filter: 5000}).to_json
+    hipster_keyword_array.each do |keyword|
+      new_search = @client.search(borough, {term: keyword, radius_filter: 1000})
       json = JSON.parse(new_search)
       borough_hash['location'] = borough
       borough_hash[keyword] = json['total']
     end
     write_data_to_file(borough_hash.to_json)
   end
-  puts hash
 end
 
 def write_data_to_file(data)
