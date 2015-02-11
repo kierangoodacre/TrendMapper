@@ -6,23 +6,22 @@ function initialize() {
   center: {lat: 51.51, lng: - 0.10}
 });
 
+var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
 // Load GeoJSON.
-map.data.loadGeoJson('https://cdn.rawgit.com/jjlakin/compound-cities/master/greater-london/inner-london/hackney.geo.json');
+map.data.loadGeoJson(json);
 
 // [START snippet]
 // Color each letter gray. Change the color when the isColorful property
 // is set to true.
 map.data.setStyle(function(feature) {
   var color = 'red';
-  if (feature.getProperty('isColorful')) {
-    color = feature.getProperty('color');
-  }
   return /** @type {google.maps.Data.StyleOptions} */({
     fillColor: color,
     strokeColor: color,
     strokeWeight: 2
   });
 });
+
 
 // When the user clicks, set 'isColorful', changing the color of the letters.
 map.data.addListener('click', function(event) {
