@@ -2,13 +2,20 @@ class Directory
 
 require 'yelp'
 
-client = Yelp::Client.new({ consumer_key: "e14LehsvaTugymGPlVfdBw",
-                            consumer_secret: "2sRB0QsyE6L3Ms910PQFH72azkw",
-                            token: "ArB_SDJYEA2WBWxJbWODKfS0p9rsI4-c",
-                            token_secret: "L_FKZMAittRmVZ_Rpbg3BaNwEgQ",
-                          })
+def initialize
+  create_client
+  fetch_data
+end
 
-p client.search('Chelsea', {term: 'fixie'})
+def create_client
+  @client = Yelp::Client.new({ consumer_key: ENV['YELP_CONSUMER_KEY'],
+                            consumer_secret: ENV['YELP_CONSUMER_SECRET'],
+                            token: ENV['YELP_TOKEN'],
+                            token_secret: ENV['YELP_TOKEN_SECRET']
+                          })
+end
+
+
 
 def borough_array
 [ "City of London",
@@ -97,4 +104,33 @@ def hipster_keyword_array
 "bikram yoga"]
 end
 
+def sml_boroughs
+  ['Hackney', 'Tower Hamlets', 'Camden']
 end
+
+def sml_keywords
+  ['fixie', 'sourdough', 'market']
+end
+
+def fetch_data
+  response = sml_boroughs.each do |borough|
+    borough_hash = Hash.new
+    sml_keywords.each do |keyword|
+      new_search = @client.search(borough, {term: keyword, radius_filter: 5000}).to_json
+      json = JSON.parse(new_search)
+      borough_hash['location'] = borough
+      borough_hash[keyword] = json['total']
+    end
+    write_data_to_file(borough_hash.to_json)
+  end
+  puts hash
+end
+
+def write_data_to_file(data)
+  File.open("data.json", "a") do |f|
+    f.write(data)
+  end
+end
+
+end
+
