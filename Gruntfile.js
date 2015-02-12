@@ -19,12 +19,18 @@ module.exports = function(grunt) {
       }
     },
 
+    execute: {
+      target: {
+        src: ['./spec/instagramSpec.js']
+      }
+    }
+
   });
 
-  grunt.loadNpmTasks('grunt-jasmine-node');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-mocha-casperjs');
+  grunt.loadNpmTasks('grunt-execute');
 
-  grunt.registerTask('default', ['jasmine_node', 'jshint', 'mocha_casperjs']);
+  grunt.registerTask('default', ['jshint', 'mocha_casperjs', 'execute']);
 
 };
