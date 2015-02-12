@@ -1,18 +1,24 @@
-var BoroughColor = require('../src/boroughColor');
+var BoroughColor = require('../src/colorChange.js');
 
-describe("Borough Color", function(){
+describe("BoroughColor", function(){
 
 	var boroughColor;
+	var test;
 
 	beforeEach(function(){
 		boroughColor = new BoroughColor();
 	});
 
-	describe("Change", function(){
+	describe("Default", function(){
 
-		it("Will have a default color", function(){
-			expect(boroughColor.heatColor).toEqual(1)
+		it("should have a default color of 3", function() {
+			expect(boroughColor.heatColor).toEqual(3)
 		});
+
+		it("can see the object variable"), function(){
+			expect(test.heatColor2).toEqual(3);
+		};
+
 
 		it("Will become more red", function(){
 			boroughColor.increaseHeatColor(2)
