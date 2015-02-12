@@ -116,7 +116,7 @@ function initialize() {
 	});
 
 	// Load GeoJSON.
-	var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
+	var json = 'https://cdn.rawgit.com/guspowell/london_gents/master/my-api.json'
 	map.data.loadGeoJson(json);
 
 	};
