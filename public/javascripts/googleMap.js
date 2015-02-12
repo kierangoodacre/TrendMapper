@@ -36,9 +36,38 @@ function initialize() {
 		},
 	];
 
-	map = new google.maps.Map(document.getElementById('map-canvas'), {
-		zoom: 11,
-		center: {lat: 51.51, lng: - 0.10}
+
+	var styles2 = [
+  {
+    "stylers": [
+      { "color": "#76da91" }
+    ]
+  },{
+    "featureType": "water",
+    "stylers": [
+      { "color": "#e72f8c" }
+    ]
+  },{
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#e0ffdf" },
+      { "weight": 0.6 }
+    ]
+  },{
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      { "weight": 0.2 },
+      { "color": "#e0ffea" }
+    ]
+  }
+]
+
+  map = new google.maps.Map(document.getElementById('map-canvas'), {
+  zoom: 11,
+  center: {lat: 51.51, lng: - 0.10}
+
 	})
 
 	map.setOptions({styles: styles});
@@ -50,6 +79,17 @@ function initialize() {
 		map.data.setStyle(function(feature){
 			return {fillColor: intensity(boroughsJson[feature.k.name]), fillOpacity: 0.8, strokeColor: 'white',strokeWeight: 0.5};
 		});
+
+		map.data.addListener('mouseover', function(event) {
+    	map.data.revertStyle();
+    	map.data.overrideStyle(event.feature, {strokeWeight: 8});
+  	});
+
+		map.data.addListener('click', function(event) {
+    	map.data.revertStyle();
+    	map.data.overrideStyle(console.log(event.feature),console.log(event.feature.k.name));
+  	});
+
 
 	});
 
