@@ -39,22 +39,23 @@ function initialize() {
   zoom: 11,
   center: {lat: 51.51, lng: - 0.10}
 	})
-	
+
 	map.setOptions({styles: styles});
 
-  $.getJSON("/data", function(data) {
-		console.log(data.Hackney);
+  $.getJSON("/trendingIndex", function(data) {
+		// console.log(data.Hackney);
 		boroughsJson = data;
-		
-		map.data.setStyle(function(feature){		  	
+
+		map.data.setStyle(function(feature) {
 			return {fillColor: intensity(boroughsJson[feature.k.name]),strokeColor: 'white',strokeWeight: 0.5};
+			console.log(boroughsJson[feature.k.name])
 		});
 
 	});
 
-// Load GeoJSON.
-var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
-map.data.loadGeoJson(json);
+	// Load GeoJSON.
+	var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
+	map.data.loadGeoJson(json);
 
 };
 
@@ -86,8 +87,8 @@ var intensity = function(data) {
 // 	    strokeColor: color,
 // 	    strokeWeight: 2
 //     });
-// 	};	
-  
+// 	};
+
 // });
 
 
