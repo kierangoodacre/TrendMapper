@@ -15,7 +15,8 @@ html, body {
 	float: right;
 	height: 100%;
 	width: 23%;
-	background-color: #2F1380;
+	background-color: #1D283D;
+  /*display: none;*/
 }
 
 .left-col {
@@ -31,9 +32,31 @@ html, body {
   width: 50%;
 }
 
-h2 {
-  margin-top: 2em;
-  text-align: center;
+.index-container {
+  width: 100%;
+  height: 38%;
+}
+
+.borough-name {
+  padding-top: 15%;
   color: white;
-  font-family: sans-serif;
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+}
+
+.borough-index {
+  color: #FF6666;
+  font-size: 8em;
+  text-align: center;
+  margin-top: 5%;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.images {
+  /*padding: 2px;*/
 }
