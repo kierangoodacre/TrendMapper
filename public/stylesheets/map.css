@@ -31,9 +31,12 @@ html, body {
   width: 50%;
 }
 
-h2 {
-  padding-top: 2em;
-  text-align: center;
-  color: white;
-  font-family: sans-serif;
+.index-container {
+  width: 100%;
+  height: 38%;
+}
+
+.image-container {
+  width: 100%;
+
 }
