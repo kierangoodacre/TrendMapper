@@ -35,6 +35,33 @@ function initialize() {
 	  },
 	];
 
+	var styles2 = [
+  {
+    "stylers": [
+      { "color": "#76da91" }
+    ]
+  },{
+    "featureType": "water",
+    "stylers": [
+      { "color": "#e72f8c" }
+    ]
+  },{
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#e0ffdf" },
+      { "weight": 0.6 }
+    ]
+  },{
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      { "weight": 0.2 },
+      { "color": "#e0ffea" }
+    ]
+  }
+]
+
   map = new google.maps.Map(document.getElementById('map-canvas'), {
   zoom: 11,
   center: {lat: 51.51, lng: - 0.10}
