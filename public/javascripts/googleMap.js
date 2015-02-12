@@ -80,6 +80,17 @@ function initialize() {
 			return {fillColor: intensity(boroughsJson[feature.k.name]), fillOpacity: 0.8, strokeColor: 'white',strokeWeight: 0.5};
 		});
 
+		map.data.addListener('mouseover', function(event) {
+    	map.data.revertStyle();
+    	map.data.overrideStyle(event.feature, {strokeWeight: 8});
+  	});
+
+		map.data.addListener('click', function(event) {
+    	map.data.revertStyle();
+    	map.data.overrideStyle(console.log(event.feature),console.log(event.feature.k.name));
+  	});
+
+
 	});
 
 	// Load GeoJSON.
