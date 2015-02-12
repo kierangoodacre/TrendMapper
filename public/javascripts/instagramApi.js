@@ -4,10 +4,18 @@ $(document).ready(function() {
     method: 'GET',
     dataType: 'jsonp',
     success: function(data) {
-      var response = data;
-      var imageArray = $.map(response, function(el) { return el; });
-      var image = imageArray[imageArray.indexOf('url')]
-      console.log(image);
+      var imageArray = data.data;
+      var urls = [];
+      for(i in imageArray) {
+        urls.push(imageArray[i].images.thumbnail.url)
+      }
+      var newImages = Mustache.render($('#instagram-images').html(), urls);
+      console.log(urls);
+      $(newImages).appendTo('.image-container');
+      $('#imageOne').attr("src", urls[0]);
+      $('#imageTwo').attr("src", urls[1]);
+      $('#imageThree').attr("src", urls[2]);
+      $('#imageFour').attr("src", urls[3]);
     }
   })
 });
