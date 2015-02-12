@@ -1,4 +1,6 @@
-{
+
+
+var trendingIndex = {
   "City of London": 47,
   "Barking and Dagenham": 85,
   "Barnet": 83,
@@ -33,3 +35,5 @@
   "Wandsworth": 62,
   "Westminster": 56
 }
+
+module.exports = trendingIndex;
