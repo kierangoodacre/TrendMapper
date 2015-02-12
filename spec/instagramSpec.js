@@ -1,5 +1,6 @@
-var instagram = require('hippie');
-var server = require('hippie');
+var hippie = require('hippie');
+var server = hippie;
+var instagram = hippie;
 
 instagram()
   .header('User-Agent', 'hippie')
@@ -19,9 +20,13 @@ server()
   .json()
   .get('http://localhost:3000/data/images')
   .expectStatus(200)
+  .expectBody({
+    "tags":["hackney"]
+  })
   .end(function(err, res, body){
     if (err) {
-      console.log('NOT PASSED') throw err
+      console.log('NOT PASSED'); 
+      throw err;
     } else {
       console.log('Test passed');
     }
