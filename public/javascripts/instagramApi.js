@@ -13,6 +13,9 @@ $(document).ready(function() {
       console.log(urls);
       $(newImages).appendTo('.image-container');
       $('#imageOne').attr("src", urls[0]);
+      $('#imageTwo').attr("src", urls[1]);
+      $('#imageThree').attr("src", urls[2]);
+      $('#imageFour').attr("src", urls[3]);
     }
   })
 });
