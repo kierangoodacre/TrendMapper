@@ -26,6 +26,14 @@ html, body {
   float: left;
 }
 
-#imageOne {
+.images {
+  float: left;
+  width: 50%;
+}
 
+h2 {
+  margin-top: 2em;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
 }
