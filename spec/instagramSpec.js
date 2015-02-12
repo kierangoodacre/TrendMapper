@@ -14,20 +14,3 @@ instagram()
       console.log('Test passed');
     }
   });
-
-server()
-  .header('User-Agent', 'hippie')
-  .json()
-  .get('http://localhost:3000/data/images')
-  .expectStatus(200)
-  .expectBody({
-    "tags":["hackney"]
-  })
-  .end(function(err, res, body){
-    if (err) {
-      console.log('NOT PASSED'); 
-      throw err;
-    } else {
-      console.log('Test passed');
-    }
-  });

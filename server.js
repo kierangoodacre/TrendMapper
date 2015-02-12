@@ -14,11 +14,6 @@ app.get('/data', function(request, response) {
 	response.send({'Hackney':20,'Islington':1})
 })
 
-app.get('/data/images', function(request, response) {
-  response.status(200);
-  response.end();
-});
-
 server.listen(3000, function() {
   console.log('Server listening on port 3000')
 });
