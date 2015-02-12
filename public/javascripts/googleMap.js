@@ -31,7 +31,7 @@ function initialize() {
 		},{
 			"featureType": "water",
 			"stylers": [
-				{ "color": "#2f1380" }
+				{ "color": "#1D283D" }
 			]
 		},
 	];
@@ -82,7 +82,7 @@ function initialize() {
 
 		map.data.addListener('mouseover', function(event) {
     	map.data.revertStyle();
-    	map.data.overrideStyle(event.feature, {strokeWeight: 8});
+    	map.data.overrideStyle(event.feature, {strokeWeight: 5});
   	});
 
 		map.data.addListener('click', function(event) {
