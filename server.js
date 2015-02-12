@@ -10,8 +10,12 @@ app.get('/', function(request,response) {
 	response.render('index')
 })
 
+app.get('/data', function(request, response) {
+	response.send({'Hackney':20,'Islington':1})
+})
+
 server.listen(3000, function() {
-	console.log('Server listening on port 3000')
+  console.log('Server listening on port 3000')
 });
 
 module.exports = server;
