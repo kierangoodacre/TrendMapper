@@ -82,7 +82,7 @@ function initialize() {
 
 		map.data.addListener('mouseover', function(event) {
     	map.data.revertStyle();
-    	map.data.overrideStyle(event.feature, {strokeWeight: 8});
+    	map.data.overrideStyle(event.feature, {strokeWeight: 4});
   	});
 
 		map.data.addListener('click', function(event) {
