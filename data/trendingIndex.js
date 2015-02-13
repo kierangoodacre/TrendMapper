@@ -1,5 +1,3 @@
-
-
 var trendingIndex = {
   "City of London": 47,
   "Barking and Dagenham": 85,
