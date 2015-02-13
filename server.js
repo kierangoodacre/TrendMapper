@@ -13,7 +13,7 @@ app.get('/', function(request,response) {
 })
 
 app.get('/index', function(request,response) {
-  response.render('index')
+	response.render('index')
 })
 
 app.get('/trendingIndex', function(request, response) {
@@ -21,7 +21,7 @@ app.get('/trendingIndex', function(request, response) {
 })
 
 server.listen(process.env.PORT || 3000, function() {
-  console.log('Server listening on port 3000')
+	console.log('Server listening on port 3000')
 });
 
 module.exports = server;
