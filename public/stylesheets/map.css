@@ -49,9 +49,8 @@ html, body {
 .borough-index {
   font-size: 8em;
   text-align: center;
-  position: absolute;
   left: 82%;
-  top: 10%;
+  padding-top: 20%;
   margin-top: 5%;
   font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
 }
@@ -68,3 +67,4 @@ html, body {
 .images {
   /*padding: 2px;*/
 }
+
