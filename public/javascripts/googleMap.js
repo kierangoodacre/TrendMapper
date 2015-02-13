@@ -73,7 +73,7 @@ function initialize() {
 	map.setOptions({styles: styles});
 
 	$.getJSON("/trendingIndex", function(data) {
-		console.log(data.Hackney);
+		console.log(boroughsJson);
 		boroughsJson = data;
 
 		map.data.setStyle(function(feature){
@@ -90,7 +90,7 @@ function initialize() {
 			map.data.revertStyle();
     	map.data.overrideStyle(console.log(event.feature),console.log(event.feature.k.name));
     	$.ajax({
-		    url: 'https://api.instagram.com/v1/tags/' + event.feature.k.name +'/media/recent?client_id=89cc7d4644154c718cc5fb612e5da3cb;count=6',
+		    url: 'https://api.instagram.com/v1/tags/' + event.feature.k.name.replace(/\s/g, '') +'/media/recent?client_id=89cc7d4644154c718cc5fb612e5da3cb;count=6',
 		    method: 'GET',
 		    dataType: 'jsonp',
 		    success: function(data) {
@@ -110,6 +110,10 @@ function initialize() {
 					$('#imageSix').attr("src", urls[5]);
 		    }
 		  })
+  	});
+
+  	map.data.addListener('click', function(event) {
+  		$('.borough-index').text(boroughsJson[event.feature.k.name]);
   	});
 
 
