@@ -17,6 +17,7 @@ html, body {
 	width: 23%;
 	background-color: #1D283D;
   /*display: none;*/
+  overflow: scroll;
 }
 
 .left-col {
