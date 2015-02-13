@@ -1,0 +1,21 @@
+body {
+  background-color: #34495e;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  padding-top: 15%;
+}
+
+button {
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 15px;
+  padding: 3em;
+  margin-bottom: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+}

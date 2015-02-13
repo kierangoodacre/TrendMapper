@@ -1,16 +1,19 @@
 var express = require('express');
 var app = express();
+var http = require('http');
 var server = require('http').createServer(app);
-var trendingIndex = require('./data/trendingIndex')
-
-
+var trendingIndex = require('./data/trendingIndex');
 
 app.set('view engine', 'ejs');
 app.use('/stylesheets', express.static(__dirname + '/public/stylesheets'));
 app.use('/javascripts', express.static(__dirname + '/public/javascripts'));
 
 app.get('/', function(request,response) {
-	response.render('index')
+	response.render('homepage')
+})
+
+app.get('/index', function(request,response) {
+  response.render('index')
 })
 
 app.get('/trendingIndex', function(request, response) {
