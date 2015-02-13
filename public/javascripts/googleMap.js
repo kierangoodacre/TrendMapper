@@ -90,7 +90,7 @@ function initialize() {
 			map.data.revertStyle();
 			map.data.overrideStyle(console.log(event.feature),console.log(event.feature.k.name));
 			$.ajax({
-				url: 'https://api.instagram.com/v1/tags/' + event.feature.k.name.replace(/\s/g, '') +'/media/recent?client_id=89cc7d4644154c718cc5fb612e5da3cb;count=10',
+				url: 'https://api.instagram.com/v1/tags/' + event.feature.k.name.replace(/\s/g, '') +'/media/recent?client_id=89cc7d4644154c718cc5fb612e5da3cb;count=20',
 				method: 'GET',
 				dataType: 'jsonp',
 				success: function(data) {
@@ -113,6 +113,16 @@ function initialize() {
 					$('#image8').attr("src", urls[7]);
 					$('#image9').attr("src", urls[8]);
 					$('#image10').attr("src", urls[9]);
+					$('#image11').attr("src", urls[10]);
+					$('#image12').attr("src", urls[11]);
+					$('#image13').attr("src", urls[12]);
+					$('#image14').attr("src", urls[13]);
+					$('#image15').attr("src", urls[14]);
+					$('#image16').attr("src", urls[15]);
+					$('#image17').attr("src", urls[16]);
+					$('#image18').attr("src", urls[17]);
+					$('#image19').attr("src", urls[18]);
+					$('#image20').attr("src", urls[19]);
 				}
 			})
 		});
