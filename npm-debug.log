@@ -1,4 +1,26 @@
 0 info it worked if it ends with ok
+<<<<<<< HEAD
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 error install Couldn't read dependencies
+5 error Failed to parse json
+5 error Unexpected token }
+6 error File: /Users/joshbebbington/Desktop/projects/london_gents/package.json
+7 error Failed to parse package.json data.
+7 error package.json must be actual JSON, not just JavaScript.
+7 error
+7 error This is not a bug in npm.
+7 error Tell the package author to fix their package.json file. JSON.parse
+8 error System Darwin 14.0.0
+9 error command "node" "/usr/local/bin/npm" "install"
+10 error cwd /Users/joshbebbington/Desktop/projects/london_gents
+11 error node -v v0.10.35
+12 error npm -v 1.4.28
+13 error file /Users/joshbebbington/Desktop/projects/london_gents/package.json
+14 error code EJSONPARSE
+15 verbose exit [ 1, true ]
+=======
 1 verbose cli [ '/opt/boxen/nodenv/versions/v0.10.31/bin/node',
 1 verbose cli   '/opt/boxen/nodenv/versions/v0.10.31/bin/npm',
 1 verbose cli   'start' ]
@@ -20,3 +42,4 @@
 12 error file /Users/jake/Desktop/Projects/makeathon-gentrification/london_gents/package.json
 13 error code EJSONPARSE
 14 verbose exit [ 1, true ]
+>>>>>>> 6b5c60e8548b535c1e19e052b2caaf6888a054c4

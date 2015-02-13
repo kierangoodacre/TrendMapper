@@ -22,8 +22,7 @@
     "jshint": "^2.6.0",
     "mocha": "^2.1.0",
     "mocha-casperjs": "^0.5.3",
-    "phantomjs": "^1.9.15",
-    "selenium-webdriver": "^2.44.0"
+    "phantomjs": "^1.9.15"
   },
   "dependencies": {
     "ejs": "^2.2.4",
