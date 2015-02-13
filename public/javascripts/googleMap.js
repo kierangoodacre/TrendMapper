@@ -125,6 +125,12 @@ function initialize() {
 
 	});
 
+	// $.getJSON('./data/compound-cities/boroughMap.json', function( data ){
+	// 	var json = data;
+	// 	console.log(json);
+	// 	return json;
+	// });
+
 	// Load GeoJSON.
 	var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
 	map.data.loadGeoJson(json);
