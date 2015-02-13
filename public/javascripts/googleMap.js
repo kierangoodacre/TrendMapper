@@ -73,7 +73,7 @@ function initialize() {
 	map.setOptions({styles: styles});
 
 	$.getJSON("/trendingIndex", function(data) {
-		console.log(data.Hackney);
+		console.log(boroughsJson);
 		boroughsJson = data;
 
 		map.data.setStyle(function(feature){
@@ -110,6 +110,10 @@ function initialize() {
 					$('#imageSix').attr("src", urls[5]);
 		    }
 		  })
+  	});
+
+  	map.data.addListener('click', function(event) {
+  		$('.borough-index').text(boroughsJson[event.feature.k.name]);
   	});
 
 
