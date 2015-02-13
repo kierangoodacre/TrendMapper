@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 
     execute: {
       target: {
-        src: ['./spec/instagramSpec.js']
+        src: ['./spec/*']
       }
     }
 
