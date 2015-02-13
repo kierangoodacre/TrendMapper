@@ -116,6 +116,10 @@ function initialize() {
   		$('.borough-index').text(boroughsJson[event.feature.k.name]);
   	});
 
+  	map.data.addListener('click', function(event){
+  		$('.borough-name').text(event.feature.k.name)
+  	});
+
 
 	});
 
