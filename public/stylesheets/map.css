@@ -3,6 +3,14 @@ html, body {
  margin: 0px;
  padding: 0px
 }
+h1{
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue" Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+  font-style: italic;
+}
 
 #map-canvas {
  height: 100%;
