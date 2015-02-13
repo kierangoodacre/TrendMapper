@@ -116,7 +116,7 @@ function initialize() {
 		});
 
 		map.data.addListener('click', function(event){
-			$('.borough-name').text(event.feature.k.name)
+			$('.borough-name').text("#" + event.feature.k.name)
 		});
 
 
