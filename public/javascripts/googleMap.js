@@ -65,7 +65,7 @@ function initialize() {
 ]
 
 	map = new google.maps.Map(document.getElementById('map-canvas'), {
-	zoom: 11,
+	zoom: 10,
 	center: {lat: 51.51, lng: - 0.10}
 
 	})
@@ -102,27 +102,9 @@ function initialize() {
 					var newImages = Mustache.render($('#instagram-images').html(), urls);
 					console.log(urls);
 					$(newImages).appendTo('.image-container');
-
-					$('#image1').attr("src", urls[0]);
-					$('#image2').attr("src", urls[1]);
-					$('#image3').attr("src", urls[2]);
-					$('#image4').attr("src", urls[3]);
-					$('#image5').attr("src", urls[4]);
-					$('#image6').attr("src", urls[5]);
-					$('#image7').attr("src", urls[6]);
-					$('#image8').attr("src", urls[7]);
-					$('#image9').attr("src", urls[8]);
-					$('#image10').attr("src", urls[9]);
-					$('#image11').attr("src", urls[10]);
-					$('#image12').attr("src", urls[11]);
-					$('#image13').attr("src", urls[12]);
-					$('#image14').attr("src", urls[13]);
-					$('#image15').attr("src", urls[14]);
-					$('#image16').attr("src", urls[15]);
-					$('#image17').attr("src", urls[16]);
-					$('#image18').attr("src", urls[17]);
-					$('#image19').attr("src", urls[18]);
-					$('#image20').attr("src", urls[19]);
+					for(i = 0; i <= 20; i ++) {
+						$('#image' + (i+1)).attr('src', urls[i])
+					};
 				}
 			})
 		});
