@@ -90,7 +90,7 @@ function initialize() {
 			map.data.revertStyle();
     	map.data.overrideStyle(console.log(event.feature),console.log(event.feature.k.name));
     	$.ajax({
-		    url: 'https://api.instagram.com/v1/tags/' + event.feature.k.name.replace(/\s/g, '') +'/media/recent?client_id=89cc7d4644154c718cc5fb612e5da3cb;count=6',
+		    url: 'https://api.instagram.com/v1/tags/' + event.feature.k.name.replace(/\s/g, '') +'/media/recent?client_id=89cc7d4644154c718cc5fb612e5da3cb;count=10',
 		    method: 'GET',
 		    dataType: 'jsonp',
 		    success: function(data) {
@@ -102,12 +102,17 @@ function initialize() {
 		      var newImages = Mustache.render($('#instagram-images').html(), urls);
 		      console.log(urls);
 		      $(newImages).appendTo('.image-container');
-		      $('#imageOne').attr("src", urls[0]);
-		      $('#imageTwo').attr("src", urls[1]);
-		      $('#imageThree').attr("src", urls[2]);
-		      $('#imageFour').attr("src", urls[3]);
-					$('#imageFive').attr("src", urls[4]);
-					$('#imageSix').attr("src", urls[5]);
+
+		      $('#image1').attr("src", urls[0]);
+		      $('#image2').attr("src", urls[1]);
+		      $('#image3').attr("src", urls[2]);
+		      $('#image4').attr("src", urls[3]);
+					$('#image5').attr("src", urls[4]);
+					$('#image6').attr("src", urls[5]);
+          $('#image7').attr("src", urls[6]);
+          $('#image8').attr("src", urls[7]);
+          $('#image9').attr("src", urls[8]);
+          $('#image10').attr("src", urls[9]);
 		    }
 		  })
   	});
@@ -124,6 +129,12 @@ function initialize() {
 
 
 	});
+
+	// $.getJSON('./data/compound-cities/boroughMap.json', function( data ){
+	// 	var json = data;
+	// 	console.log(json);
+	// 	return json;
+	// });
 
 	// Load GeoJSON.
 	var json = 'https://rawgit.com/jjlakin/compound-cities/master/greater-london/my-api.json'
