@@ -119,6 +119,8 @@ function initialize() {
 
   	map.data.addListener('click', function(event) {
   		$('.borough-index').text(boroughsJson[event.feature.k.name]);
+  			console.log(typeof intensity(boroughsJson[event.feature.k.name]))
+  		$('.borough-index').css('color', intensity(boroughsJson[event.feature.k.name]))
   	});
 
   	map.data.addListener('click', function(event){
