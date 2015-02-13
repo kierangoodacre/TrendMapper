@@ -1,64 +1,71 @@
 html, body {
-  height: 100%;
-  margin: 0px;
-  padding: 0px
+ height: 100%;
+ margin: 0px;
+ padding: 0px
 }
 
 #map-canvas {
-  height: 100%;
-  width: 100%;
-  margin: 0px;
-  padding: 0px
+ height: 100%;
+ width: 100%;
+ margin: 0px;
+ padding: 0px
 }
 
 .right-col {
-	float: right;
-	height: 100%;
-	width: 23%;
-	background-color: #1D283D;
-  float: right;
-  height: 100%;
-  width: 23%;
-  background-color: #1D283D;
-  overflow: scroll;
+ float: right;
+ height: 100%;
+ width: 23%;
+ background-color: #1D283D ;
+ /*display: none;*/
+ overflow: scroll;
+ font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+ font-weight: 100;
 }
 
 .left-col {
-  height: 100%;
-  width: 77%;
-  margin: 0px;
-  padding: 0px;
-  float: left;
+ height: 100%;
+ width: 77%;
+ margin: 0px;
+ padding: 0px;
+ float: left;
 }
 
 .images {
-  float: left;
-  width: 50%;
+ float: left;
+ width: 50%;
 }
 
 .index-container {
-  width: 100%;
+ width: 100%;
+ height: 38%;
 }
 
 .borough-name {
-  padding-top: 15%;
-  color: white;
-  font-size: 2.3em;
-  text-align: center;
-  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+ padding-top: 15%;
+ color: white;
+ font-size: 2.3em;
+ text-align: center;
+ /*font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;*/
 }
 
 .borough-index {
-  font-size: 8em;
-  text-align: center;
-  left: 82%;
-  padding-top: 20%;
-  margin-top: 5%;
-  margin-bottom: 2px;
-  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+ font-size: 8em;
+ text-align: center;
+ left: 82%;
+ padding-top: 10%;
+ margin-top: 5%;
+ /*font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;*/
 }
 
 .image-container {
-  width: 100%;
+ width: 100%;
 }
 
+.images {
+ /*padding: 2px;*/
+}
+
+
+.images {
+ /*padding: 2px;*/
+}
