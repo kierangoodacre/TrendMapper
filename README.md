@@ -13,10 +13,14 @@ We used some of the freely available government data found on London's data stor
 
 We also utilised Instagrams API to show the latest images hashtagged under the area names for the district you clicked on, this we felt would provide some more background to the culture and happenings of that chosen area.
 
-Team
+Contributors
 --------------------
 
-Kieran Goodacre, Jake Alvarez, Gus Powell, Josh Bebbington, & Johnny Lakin
+- Kieran Goodacre https://github.com/kierangoodacre
+- Josh Bebbington https://github.com/bebbs
+- Gus Powell https://github.com/guspowell
+- Johnny Lakin
+- Jake Alvarez
 
 Languages - Frameworks - Tools
 --------------------------------
