@@ -13,6 +13,11 @@ We used some of the freely available government data found on London's data stor
 
 We also utilised Instagrams API to show the latest images hashtagged under the area names for the district you clicked on, this we felt would provide some more background to the culture and happenings of that chosen area.
 
+Screenshot
+---------------
+
+![SCREEN_SHOT](./public/images/app_screen_shot.png)
+
 Contributors
 --------------------
 
