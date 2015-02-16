@@ -19,50 +19,46 @@ Contributors
 - Kieran Goodacre https://github.com/kierangoodacre
 - Josh Bebbington https://github.com/bebbs
 - Gus Powell https://github.com/guspowell
-- Johnny Lakin
-- Jake Alvarez
+- Johnny Lakin https://github.com/jjlakin
+- Jake Alvarez https://github.com/jakealvarez
 
-Languages - Frameworks - Tools
+Technologies
 --------------------------------
 
-javaScript,
-nodeJs,
-jQuery,
-Google Maps API,
-Instagram API,
-Yelp API,
-CSS,
-Hippie,
-Moustache,
-Grunt
+|Languages |Frameworks|Tools          |Testing|
+|----------|----------|---------------|-------|
+|Javascript|Node      |Google Maps API|Hippie |
+|CSS       |Express.js|Instagram API  |       |
+|HTML      |jQuery    |Yelp API       |       |
+|          |Moustache |Grunt          |       |
+
 
 Instructions
 ------------------
-```npm install``` download bundle
+Download the repo
+```git clone https://github.com/bebbs/london_gents.git```
+Install dependencies
+```npm install```
+Run the Hippie API testing suite
+```npm test``` 
 
-```npm test``` will run hippie and it's API tests
-
-Highlights
+Learning Outcomes
 -----------------
 
-The teams highlights included completing a working single page web application, which we can proudly say, is a very tidy looking and functional MVP.
+The team highlight was delivering a functional MVP that combined data sources, mapped it with the Google Maps API, and providing context with photos gathered from the Instagram API.
 
-Personally highlights for me were...
-
-Increasing my knowledge of making requests to web based API's using jQuery and Ajax
-
-Learning the use of a new API testing framework Hippie
-
-Combining both Google Maps API and Instagrams API to work asynchronously on the page.
+Improvements
+------------
+Increased test coverage. The app uses a lot of jQuery which we found difficult to test. We currently we have good coverage on all of our API routes using the Hippie testing library.
 
 Enhancements
 ------------------
 
-More granular data on the index scoring system, currently we are using house prices and age, we would like to use more fators such as liscenced premises, number of shops, coffee houses and places of cultural significance
+More relevant data on the index scoring system, currently we are using house prices and age, we would like to use more fators such as liscenced premises, number of shops, coffee houses and places of cultural significance.
 
-Incorperate more data from community based web applications such as Reddit & Yelp
+Incorporate more data from community based web applications such as Reddit & Yelp.
 
-Break the map down to postcodes
+More granular display of the data. Currently it is displayed by borough, we would prefer to break it down by postcode.
 
-Improve lay out and context, so user can understand more what the data represents
+Rethink the front end to provide more context around what the data shows. Experiment with alternate ways of representing the data.
 
