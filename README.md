@@ -16,7 +16,7 @@ We also utilised Instagrams API to show the latest images hashtagged under the a
 Screenshot
 ---------------
 
-![SCREEN_SHOT](/Users/kierangoodacre/Downloads/screenshot.png)
+![SCREEN_SHOT](Users/kierangoodacre/Downloads/screenshot.png)
 
 Contributors
 --------------------
